@@ -157,14 +157,14 @@ CREATE TABLE historico_cargos (
                 id_cargo VARCHAR(10) NOT NULL,
                 data_final DATE NOT NULL,
                 id_departamento INT,
-                PRIMARY KEY (id_empregado, data_inicial)
+                PRIMARY KEY (id_empregado)
 );
 
 ALTER TABLE historico_cargos COMMENT 'essa e uma tabela de historico _cargos';
 
 ALTER TABLE historico_cargos MODIFY COLUMN id_empregado INTEGER COMMENT 'chave primária e chave estrangeira que vem da tabela empregados';
 
-ALTER TABLE historico_cargos MODIFY COLUMN data_inicial DATE COMMENT 'chave primária';
+ALTER TABLE historico_cargos MODIFY COLUMN data_inicial DATE COMMENT 'data de entrada do funcionario';
 
 ALTER TABLE historico_cargos MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'chave estrangeira tabela cargos';
 
